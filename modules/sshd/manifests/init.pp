@@ -1,6 +1,6 @@
 class sshd {
 	package {
-		"sshd": ensure => installed;
+		"openssh-server": ensure => installed;
 	}
 	
 	file {"/etc/sshd.conf":
@@ -11,7 +11,7 @@ class sshd {
 		mode =>444,
 		ownder=>root,
 		group=>root,
-		require => Package["sshd"],
+		require => Package["openssh-server"],
 	}
 
 	service { "sshd":
@@ -19,7 +19,7 @@ class sshd {
 		ensure => running,
 		hasstatus => true,
 		hasrestart => true,
-		require => [Package["sshd"],
+		require => [Package["openssh-server"],
 			File["/etc/sshd.conf"]],
 		subscribe => File ["/etc/sshd.conf"],
 
