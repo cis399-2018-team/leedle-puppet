@@ -8,7 +8,7 @@ class sshd {
 			"/etc/ssh/sshd_config",
 		],
 		mode =>444,
-		ownder=>root,
+		owner=>root,
 		group=>root,
 		require => Package["openssh-server"],
 	}
