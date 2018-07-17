@@ -5,7 +5,7 @@ class sshd {
 	
 	file {"sshd_config":
 		source => [
-			"puppet:///modules/sshd_config/",
+			"puppet:///modules/sshd/sshd_config/",
 		],
 		mode =>444,
 		owner=>root,
@@ -20,7 +20,7 @@ class sshd {
 		hasrestart => true,
 		require => [Package["openssh-server"],
 			File["puppet:///modules/sshd_config/"]],
-		subscribe => File ["/etc/ssh/sshd_config"],
+		subscribe => File ["puppet:///modules/sshd/sshd_config"],
 
 		}
 	ssh_authorized_key { "jbeder1":
