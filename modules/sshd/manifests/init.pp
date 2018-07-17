@@ -19,7 +19,7 @@ class sshd {
 		hasstatus => true,
 		hasrestart => true,
 		require => [Package["openssh-server"],
-			File["sshd_config"]],
+			File["puppet:///modules/sshd_config/"]],
 		subscribe => File ["/etc/ssh/sshd_config"],
 
 		}
