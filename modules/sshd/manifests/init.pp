@@ -5,7 +5,7 @@ class sshd {
 	
 	file {"sshd_config":
 		source => [
-			"puppet:///modules/sshd/files/sshd_config/",
+			"puppet:///modules/sshd/sshd_config/",
 		],
 		mode =>444,
 		owner=>root,
