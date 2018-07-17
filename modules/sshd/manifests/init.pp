@@ -3,7 +3,7 @@ class sshd {
 		"openssh-server": ensure => installed;
 	}
 	
-	file {"sshd_config":
+	file {"puppet:///modules/sshd/sshd_config":
 		source => [
 			"puppet:///modules/sshd/sshd_config",
 		],
