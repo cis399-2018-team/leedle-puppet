@@ -3,9 +3,9 @@ class sshd {
 		"openssh-server": ensure => installed;
 	}
 	
-	file {"/etc/ssh/sshd_config":
+	file {"sshd_config":
 		source => [
-			"/etc/ssh/sshd_config",
+			"puppet:///modules/sshd_config/",
 		],
 		mode =>444,
 		owner=>root,
@@ -19,7 +19,7 @@ class sshd {
 		hasstatus => true,
 		hasrestart => true,
 		require => [Package["openssh-server"],
-			File["/etc/ssh/sshd_config"]],
+			File["sshd_config"]],
 		subscribe => File ["/etc/ssh/sshd_config"],
 
 		}
