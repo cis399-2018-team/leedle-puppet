@@ -3,7 +3,7 @@ class sshd {
 		"openssh-server": ensure => installed;
 	}
 	
-	file {"sshd_config":
+	file {"/etc/ssh/sshd_config":
 		source => [
 			"/etc/ssh/sshd_config",
 		],
