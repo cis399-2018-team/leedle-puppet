@@ -5,7 +5,8 @@ class sshd {
 	
 	file {"sshd_config":
 		source => [
-			"puppet:///modules/sshd/sshd_config/",
+			"puppet:///modules/sshd/$hostname/sshd_config",
+			"puppet:///modules/sshd/sshd_config",
 		],
 		mode =>444,
 		owner=>root,
@@ -19,7 +20,7 @@ class sshd {
 		hasstatus => true,
 		hasrestart => true,
 		require => [Package["openssh-server"],
-			File["puppet:///modules/files/sshd_config/"]],
+			File["puppet:///modules/files/sshd_config"]],
 		subscribe => File ["puppet:///modules/sshd/files/sshd_config"],
 
 		}
