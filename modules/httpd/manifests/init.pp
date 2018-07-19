@@ -1,4 +1,3 @@
-#httpd module
 
 class httpd {
 	package { 
