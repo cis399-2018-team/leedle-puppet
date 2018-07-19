@@ -5,7 +5,17 @@ class httpd {
 		"apache2": ensure => installed;
 	}
 
-	service { "httpd":
+	file{"/etc/apache2/apache2.conf":
+		source => [
+			"puppet:///modules/httpd/apache2.conf",
+		],
+		mode => 444,
+		owner => root,
+		group => root,
+		require => Package["apache2"],
+	}
+
+	service { "apache2":
 		enable => true,
 		ensure => running,
 		hasstatus => true,
