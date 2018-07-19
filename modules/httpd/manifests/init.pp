@@ -14,7 +14,7 @@ class httpd {
 		require => Package["apache2"],
 	}
 
-	service { "httpd":
+	service { "apache2":
 		enable => true,
 		ensure => running,
 		hasstatus => true,
