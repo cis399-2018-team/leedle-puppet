@@ -15,11 +15,13 @@ class httpd {
 		require => Package["apache2"],
 	}
 
-	service { "apache2":
+	service { "httpd":
 		enable => true,
 		ensure => running,
 		hasstatus => true,
 		hasrestart => true,
-		require => Package["apache2"], 
+		require => [Package["apache2"],
+			File["/etc/apache2/apache2.conf"]],
+		subscribe => File["/etc/apache2/apache2.conf"], 
 	}
 }
