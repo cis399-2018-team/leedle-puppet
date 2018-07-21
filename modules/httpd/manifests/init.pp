@@ -14,7 +14,7 @@ class httpd {
 	}
 	file {"/var/www/html/index.html":
 		source => [
-			"puppet:///var/www/html/index.html",
+			"puppet:///modules/httpd/index.html",
 		],
 		mode => 444,
 		recurse => true,
