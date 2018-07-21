@@ -17,6 +17,7 @@ class httpd {
 		source => [
 			"puppet:///var/www/html/index.html",
 		],
+		mode => 444,
 		recurse => true,
 		owner => root,
 		group => root,
