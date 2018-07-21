@@ -1,10 +1,9 @@
-
 class httpd {
 	package { 
 		"apache2": ensure => installed;
 	}
 
-	file{"/etc/apache2/apache2.conf":
+	file {"/etc/apache2/apache2.conf":
 		source => [
 			"puppet:///modules/httpd/apache2.conf",
 		],
@@ -12,6 +11,15 @@ class httpd {
 		owner => root,
 		group => root,
 		require => Package["apache2"],
+	}
+
+	file {"/var/www/html":
+		source => [
+			"puppet:///var/www/html",
+		],
+		recurse => true,
+		owner => root,
+		group => root.
 	}
 
 	service { "apache2":
