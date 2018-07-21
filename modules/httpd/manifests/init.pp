@@ -19,7 +19,7 @@ class httpd {
 		],
 		recurse => true,
 		owner => root,
-		group => root.
+		group => root,
 	}
 
 	service { "apache2":
