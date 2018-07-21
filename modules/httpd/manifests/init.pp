@@ -13,9 +13,9 @@ class httpd {
 		require => Package["apache2"],
 	}
 
-	file {"/var/www/html":
+	file {"/var/www/html/index.html":
 		source => [
-			"puppet:///var/www/html",
+			"puppet:///var/www/html/index.html",
 		],
 		recurse => true,
 		owner => root,
