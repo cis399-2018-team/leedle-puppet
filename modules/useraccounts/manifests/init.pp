@@ -1,5 +1,5 @@
 class useraccounts {
-	$users = ['jbeder, 'dbeeman', 'mhagel2']
+	$users = ['jbeder', 'dbeeman', 'mhagel2']
 
 	$users.each |String $user| {
 		user { $user:
