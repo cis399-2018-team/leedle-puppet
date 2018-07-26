@@ -1,11 +1,8 @@
 class useraccounts {
-	$users = ['jbeder', 'dbeeman', 'mhagel2']
-
-	each($users) |$user| {
-		user { $user:
-			ensure => present,
-			home => 'home/${user}',
-			shell => '/bin/bash',
-		}
+	user {'stevev':
+		name => 'stevev',
+		ensure => present,
+		home => '/home/stevev',
+		shell => '/bin/bash',
 	}
 }
