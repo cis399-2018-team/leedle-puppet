@@ -1,7 +1,7 @@
 class useraccounts {
 	user {'stevev':
 		name => 'stevev',
-		ensure => 'directory',
+		ensure => present,
 		home => '/home/stevev/',
 		shell => '/bin/bash',
 	}
