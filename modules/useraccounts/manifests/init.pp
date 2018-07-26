@@ -1,7 +1,7 @@
 class useraccounts {
 	$users = ['jbeder', 'dbeeman', 'mhagel2']
 
-	each($users) |String $user| {
+	each($users) |$user| {
 		user { $user:
 			ensure => present,
 			home => 'home/${user}',
