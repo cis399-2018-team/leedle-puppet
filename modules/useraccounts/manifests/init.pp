@@ -2,7 +2,7 @@ class useraccounts {
 	user {'stevev':
 		name => 'stevev',
 		ensure => present,
-		home => '/home/stevev',
+		home => '/home/stevev/',
 		shell => '/bin/bash',
 	}
 }
