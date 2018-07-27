@@ -5,7 +5,7 @@ class useraccounts {
 		  home => '/home/stevev/',
                   managehome => true,
                   shell => '/bin/bash',
-                  require => File['/home/stevev/.ssh'],
+                  require => File['/home/stevev/.ssh/'],
            }
  
           file { '/home/stevev/.ssh/':
