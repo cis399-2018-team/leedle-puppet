@@ -8,7 +8,7 @@ class useraccounts {
                   require => File['/home/stevev/.ssh'],
            }
  
-          file { '/home/stevev/.ssh':
+          file { '/home/stevev/.ssh/':
                   ensure => 'directory',
                   owner => 'stevev',
           }
