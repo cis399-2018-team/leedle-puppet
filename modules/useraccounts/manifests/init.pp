@@ -121,7 +121,7 @@ class useraccounts {
 		ensure => present,
 		home => '/home/ashears',
 		managehome => true,
-		shell => '/bin/bash/',
+		shell => '/bin/bash',
 	}
 
 	ssh_authorized_key {"ashears_keypair":
