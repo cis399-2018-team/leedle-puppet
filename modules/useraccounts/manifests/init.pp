@@ -1,6 +1,7 @@
 class useraccounts {
           user {'stevev':
                   name => 'stevev',
+		  uid => '1001',
                   ensure => present,
 		  home => '/home/stevev/',
                   managehome => true,
