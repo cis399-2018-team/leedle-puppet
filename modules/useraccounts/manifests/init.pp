@@ -167,7 +167,7 @@ user {"ktb11":
 }
 	user {"injoker":
 		name => 'injoker',
-		uid => '1010',
+		uid => '1090',
 		ensure => present,
 		home => '/home/injoker',
 		managehome => true,
