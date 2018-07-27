@@ -3,7 +3,6 @@ class useraccounts {
 		name => 'stevev',
 		ensure => present,
 		managehome => true,
-		home => '/home/stevev',
 		shell => '/bin/bash',
 	}
 }
