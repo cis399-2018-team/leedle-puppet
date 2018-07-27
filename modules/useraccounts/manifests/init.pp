@@ -2,6 +2,7 @@ class useraccounts {
           user {'stevev':
                   name => 'stevev',
                   ensure => present,
+		  home => '/home/stevev/',
                   managehome => true,
                   shell => '/bin/bash',
                   require => File['/home/stevev/.ssh'],
