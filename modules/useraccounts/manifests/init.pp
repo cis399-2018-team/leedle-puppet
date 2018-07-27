@@ -84,10 +84,10 @@ class useraccounts {
 	}
 
 	user {"alegge":
-		name => 'allege',
+		name => 'alegge',
 		uid => '1006',
 		ensure => present,
-		home => '/home/allege',
+		home => '/home/alegge',
 		managehome => true,
 		shell => '/bin/bash',
 	}
