@@ -54,7 +54,7 @@ class useraccounts {
                   name => 'aarcher',
 		  uid => '1004',
                   ensure => present,
-		  home => '/home/'aarcher',
+		  home => '/home/aarcher/',
                   managehome => true,
                   shell => '/bin/bash',
 	
