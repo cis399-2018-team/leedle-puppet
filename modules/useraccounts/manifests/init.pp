@@ -5,13 +5,8 @@ class useraccounts {
 		  home => '/home/stevev/',
                   managehome => true,
                   shell => '/bin/bash',
-                  require => File['/home/stevev/.ssh/'],
 	
 	} 
-      file { '/home/stevev/.ssh/':
-                  ensure => 'directory',
-                  owner => 'stevev',
-          }
           ssh_authorized_key {"stevev":
                   ensure => present,
                   user => "stevev",
