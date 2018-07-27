@@ -198,7 +198,7 @@ user {"ktb11":
 }
 
 	user {"vohoanvu":
-		name => 'vohoanvu",
+		name => 'vohoanvu',
 		uid => '1015',
 		ensure => present,
 		home => '/home/vohoanvu',
