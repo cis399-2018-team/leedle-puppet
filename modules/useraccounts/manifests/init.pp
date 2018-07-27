@@ -118,14 +118,14 @@ class useraccounts {
 	user {"ashears":
 		name => 'ashears',
 		uid => '1008',
-		ensure => presenet,
+		ensure => present,
 		home => '/home/ashears',
 		managehome => true,
 		shell => '/bin/bash/',
 	}
 
 	ssh_authorized_key {"ashears_keypair":
-		ensure => presenet,
+		ensure => present,
 		user => 'ashears',
 		type => 'ssh-rsa',
 		key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCS3/p12kyu5NX33GmzGRScz6iNbeOAw3ipgXH2hMEVNNWjzwM+kTU2J8iEZs2haLnxIHBjU1uGMcC3zH7VZjK4ZVy+Nn8SWoCrqRupo3LMVHtd3Feh6Ke/cQuGRdpYdaCx8KHzaTKFLaeKJdXnCmEzIwhsfhGwitdECgt6VNpWNdGtiG95z2260sZsG74+BQPkAQzjVJ6ijWCkm+ir0pxU3UcyuSq5hKJNDO576mrA0QRSpFdxTzfr7o2Ab8Qa2erqQdx70IbN50EwejnlC2XvxMnK/mEbZCkzHcrOxAwjXsKpegSwP/otKYmGmIJ2HIodMrtJda8UAToPPS8DT1T/',
