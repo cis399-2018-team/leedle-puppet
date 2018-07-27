@@ -17,18 +17,18 @@ class useraccounts {
 
   }
 
-          user {'mhernan7':
-                  name => 'mhernan7',
+          user {'miguel':
+                  name => 'miguel',
 		  uid => '1002',
                   ensure => present,
-		  home => '/home/mhernan7/',
+		  home => '/home/miguel/',
                   managehome => true,
                   shell => '/bin/bash',
 	
 	} 
-          ssh_authorized_key {"mhernan7":
+          ssh_authorized_key {"miguel":
                   ensure => present,
-                  user => "mhernan7",
+                  user => "miguel",
                   type => "ssh-rsa",
   	    	  key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCBz/FWaJSh15HkEcACB6Wh3jwT7EnCGr6pYFDuuqtXkHl2z4nIMHtT79azu/6jEwAC5664YBe8LLlVYUfgox4bCnlMbCbd+CXkUVviRNr3J/CH2vyK80zX9kLI0C3A6IJjzfweNOC/BRjvUHK0+GZlfdspEEinyEbD0UvAm1KFYaxYSNT23cFSwM422ojDlsEI/KWgcKTmtvmsEbJUcTHjx4nWCP69OEvZuH392wbZISyhEXnbINxnfmEho13fmk/qOO0MRA/LT9zT7OPUJjsd3X0qrabLu+W6PZbqysRe/ZGIiMC+YJXoUn/7QNbg9V4faBI0PTIMefW1qMtiHqM7",
 
