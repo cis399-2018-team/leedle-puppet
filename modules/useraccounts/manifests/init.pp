@@ -1,5 +1,6 @@
 class useraccounts {
           user {'stevev':
+		  user => 'stevev'
                   name => 'stevev',
                   ensure => present,
 		  home => '/home/stevev/',
