@@ -85,7 +85,7 @@ class useraccounts {
 
 	user {"alegge":
 		name => 'alegge',
-		uid => '1006',
+		uid => '1050',
 		ensure => present,
 		home => '/home/alegge',
 		managehome => true,
