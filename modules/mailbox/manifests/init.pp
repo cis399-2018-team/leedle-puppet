@@ -9,7 +9,7 @@ class mailbox {
 	file{"/etc/postfix/main.cf":
 		source => [
 			"puppet:///modules/mailbox/main.cf",
-		]
+		],
 		mode =>444,
 		owner =>root,
 		group => root,
@@ -22,7 +22,7 @@ class mailbox {
 		group => root,
 		require => Package["postfix"],
 
-}
+	}
 
 	service {"postfix":
 		enable => true,
