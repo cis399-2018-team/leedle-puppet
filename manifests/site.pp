@@ -10,12 +10,14 @@ node ip-10-0-1-189 {
 	include sshd
 	include httpd
 	include useraccounts
+	include mailbox
 } 
 
 node ip-10-0-1-214 {
 	include sshd
 	include httpd
 	include useraccounts
+	include mailbox
 }
 
 
