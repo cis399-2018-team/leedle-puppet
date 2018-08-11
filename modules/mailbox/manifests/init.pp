@@ -16,7 +16,11 @@ class mailbox {
 		require => Package["postfix"],
 	}
 
-	file {"puppet:///etc/Muttrc":
+	file {"/etc/Muttrc":
+
+		source => [
+			"puppet:///modules/mailbox/Muttrc",
+		],
 		mode =>444,
 		owner =>root,
 		group => root,
