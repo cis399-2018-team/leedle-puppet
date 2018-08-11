@@ -29,8 +29,7 @@ class mailbox {
 		ensure => running,
 		hasstatus =>true,
 		hasrestart => true,
-		require => [Package["postfix"],	
-				File[/etc/postfix/main.cf]],
+		require => Package["postfix"],
 		subscribe => [File["/etc/postfix/main.cf"],
 		}
 
