@@ -16,7 +16,7 @@ class mailbox {
 		require => Package["postfix"],
 	}
 
-	file {"~/.muttrc":
+	file {"puppet:///etc/Muttrc":
 		mode =>444,
 		owner =>root,
 		group => root,
@@ -30,7 +30,7 @@ class mailbox {
 		hasstatus =>true,
 		hasrestart => true,
 		require => Package["postfix"],
-		subscribe => [File["/etc/postfix/main.cf"],
+		subscribe => File["/etc/postfix/main.cf"],
 		}
 
 }
