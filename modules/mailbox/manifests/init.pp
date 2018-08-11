@@ -6,8 +6,10 @@ class mailbox {
 		"mutt": ensure => installed;
 	}
 	
-	file{"NOT SURE YET":
-		
+	file{"/etc/postfix/main.cf":
+		source => [
+			"puppet:///modules/mailbox/main.cf",
+		]
 		mode =>444,
 		owner =>root,
 		group => root,
@@ -28,8 +30,8 @@ class mailbox {
 		hasstatus =>true,
 		hasrestart => true,
 		require => [Package["postfix"], Package["mutt"],
-				File[UNKNOWN],FILE[UNKNOWN]],
-		subscribe => [File["UNKNOWN"], FILE[UNKNOWN]],
+				File[/etc/postfix/main.cf],FILE[UNKNOWN]],
+		subscribe => [File["/etc/postfix/main.cf"], FILE[UNKNOWN]],
 		}
 
 }
