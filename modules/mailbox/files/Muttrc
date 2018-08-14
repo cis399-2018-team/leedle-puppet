@@ -60,7 +60,7 @@ bind browser y exit
 # If Mutt is unable to determine your site's domain name correctly, you can
 # set the default here. (better: fix /etc/mailname)
 #
-# set hostname=cs.hmc.edu
+set hostname="ec2-34-216-64-154.us-west-2.compute.amazonaws.com"
 
 # If your sendmail supports the -B8BITMIME flag, enable the following
 #
