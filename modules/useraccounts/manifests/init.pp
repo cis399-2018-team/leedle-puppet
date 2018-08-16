@@ -135,7 +135,7 @@ class useraccounts {
 
 	user {"alonzo":
 		name => 'alonzo',
-		uid => '1040',
+		uid => '1017',
 		ensure => present,
 		home => '/home/alonzo',
 		managehome => true,
