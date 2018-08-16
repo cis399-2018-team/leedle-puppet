@@ -232,7 +232,7 @@ user {"ktb11":
 	
 	user {"testuser":
 		name => 'testuser',
-		uid => '1017',
+		uid => '1038',
 		ensure => present,
 		home => '/home/testuser',
 		managehome => true,
