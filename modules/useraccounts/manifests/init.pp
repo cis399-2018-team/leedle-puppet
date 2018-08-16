@@ -133,9 +133,9 @@ class useraccounts {
 
 
 
-	user {"alonzoCIS399":
-		name => 'alonzoCIS399',
-		uid => '1009',
+	user {"alonzo":
+		name => 'alonzo',
+		uid => '1040',
 		ensure => present,
 		home => '/home/alonzoCIS399',
 		managehome => true,
@@ -144,7 +144,7 @@ class useraccounts {
 
 	ssh_authorized_key {"alonzoCIS399":
 		ensure => present,
-		user => 'alonzoCIS399',
+		user => 'alonzo',
 		type => 'ssh-rsa',
 		key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCia0XRNoD0AJA8SsJD494EDxNT43WnmbeOOPJ2JK91X6wOD8PA0kykl6T5a9zahUa163sXT9i99YPQl+ADH0Ls3GiQiaguYkR3hjb++DLTtRvTAb06rwoKH+YmXfFFtQ3kEPgZS2b1HZryxTtfOhdT/CZtX9k7QmkVy2cJw0zAWB7NTGS/baD6HADT0ImOkpIwrziSLsWi0WCXvd7PgytLdio3Q9/+07d0QByUBChH74LINM2A7ETH8MYlZ+HdJPXlN82tmzNLKLcJSqkh2QSQijg/CJOh/cS2p358d3C60ki7SwbaSCH5WJ67iDueMMHy5bkoyvSu/hHwOWXtc3+P",
 }
