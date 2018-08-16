@@ -137,7 +137,7 @@ class useraccounts {
 		name => 'alonzo',
 		uid => '1040',
 		ensure => present,
-		home => '/home/alonzoCIS399',
+		home => '/home/alonzo',
 		managehome => true,
 		shell => '/bin/bash',
 	}
