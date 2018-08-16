@@ -133,11 +133,11 @@ class useraccounts {
 
 
 
-	user {"alonzo":
-		name => 'alonzo',
+	user {"alonzoCIS399":
+		name => 'alonzoCIS399',
 		uid => '1017',
 		ensure => present,
-		home => '/home/alonzo',
+		home => '/home/alonzoCIS399',
 		managehome => true,
 		shell => '/bin/bash',
 	}
